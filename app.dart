@@ -1,5 +1,12 @@
 // app.dart
 
 void main() {
-	print("Hello");
+	  var original = 'Hello';
+  var copy = original;
+  
+  print(copy);
+
+  original = 'no';
+  print(original);
+
 }
