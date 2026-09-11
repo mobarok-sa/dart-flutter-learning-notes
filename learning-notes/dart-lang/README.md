@@ -275,6 +275,171 @@ e5     → × 10⁵
 
 
 
+# Dart: Strings
+
+## String
+
+A `String` is a sequence of characters/text.
+
+```dart
+String name = 'Dart';
+```
+
+Strings can use single or double quotes:
+
+```dart
+'Hello'
+"Hello"
+```
+
+## Escape Characters
+
+Use `\` to escape special characters.
+
+```dart
+'It\'s Dart'
+"It's Dart"
+
+print('\$5'); // $5
+```
+
+## Concatenation
+
+Use `+` to join strings.
+
+```dart
+String first = 'Hello';
+String second = 'World';
+
+print(first + ' ' + second);
+```
+
+Output:
+
+```text
+Hello World
+```
+
+## String Interpolation
+
+Insert variables using `$`.
+
+```dart
+String name = 'Alice';
+
+print('Hello $name');
+```
+
+For expressions, use `${}`:
+
+```dart
+print('Result: ${5 + 3}');
+```
+
+Output:
+
+```text
+Result: 8
+```
+
+## Length & Indexing
+
+`.length` → number of characters.
+
+```dart
+String greeting = 'Hello';
+
+print(greeting.length); // 5
+print(greeting[0]);     // H
+```
+
+Dart uses **zero-based indexing**:
+
+```text
+H  e  l  l  o
+0  1  2  3  4
+```
+
+Last character:
+
+```dart
+print(greeting[greeting.length - 1]);
+```
+
+> Dart does **not** support negative indexing.
+
+## Useful Methods
+
+```dart
+String text = 'Dart Programming';
+
+print(text.toUpperCase()); // DART PROGRAMMING
+print(text.toLowerCase()); // dart programming
+print(text.substring(0, 4)); // Dart
+```
+
+### Strings are Immutable
+
+Strings cannot be changed after they are created.
+
+String methods return a **new string**.
+
+```dart
+String text = 'Dart';
+
+String upper = text.toUpperCase();
+
+print(text);  // Dart
+print(upper); // DART
+```
+
+## Multiline Strings
+
+Use triple quotes:
+
+```dart
+String message = '''
+Hello
+World
+Dart
+''';
+```
+
+### Adjacent Literals
+
+Adjacent strings are automatically joined:
+
+```dart
+String text = 'Hello '
+              'World';
+```
+
+Output:
+
+```text
+Hello World
+```
+
+## Quick Reference
+
+```text
+String       → text
++            → concatenate
+$variable    → interpolation
+${expression}→ expression interpolation
+\$           → literal $
+.length      → string length
+[index]      → access character
+.length - 1  → last character
+.toUpperCase() → uppercase
+.toLowerCase() → lowercase
+.substring() → extract part
+''' '''      → multiline string
+```
+
+> **Remember:** Dart strings are **immutable** and use **zero-based indexing**.
+
+
 
 ```dart
 
